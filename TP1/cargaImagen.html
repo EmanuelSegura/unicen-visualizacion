@@ -5,7 +5,7 @@
     <title>Template</title>
   </head>
   <canvas id="canvas" width="900" height="600" style="border:#000 solid 1px;" />
-  </body>
+  <body>
   <script>
   var ctx = document.getElementById("canvas").getContext("2d");
 
@@ -35,30 +35,12 @@
          var green = getGreen(imageData,x,y);
          var blue = getBlue(imageData,x,y);
 
-        //Sepia
-        // var sepiaR = Math.floor(0.393*red + 0.769*green + 0.189*blue);
-        // var sepiaG = Math.floor(0.349*red + 0.686*green + 0.168*blue);
-        // var sepiaB = Math.floor(0.272*red + 0.534*green + 0.131*blue);
+         var value = 20
 
-        //Binarizacion
-
-        var pixelMinimo = 155;
+          setPixel (imageData, x,y,(red/255) - 0.5) *value),(green/255) - 0.5) * value),(blue/255) - 0.5) * value),255);
 
 
-        if(Math.floor(0.2126*red + 0.7152*green + 0.0722*blue) > pixelMinimo){
-          var colorPixel = 255;
-        }else{
-          var colorPixel = 0;
-        };
 
-        red = green = blue = colorPixel;
-
-
-        //var grey = ((red+green+blue)/3); Para pasarla a escala de grises
-        setPixel (imageData, x, y, red, green, blue, 255);
-        //Escala de grises: setPixel (imageData, x, y, grey, grey, grey, 255);
-        //Negativo: setPixel (imageData, x, y, 255-red, 255-green, 255-blue, 255);
-        //Sepia: setPixel (imageData, x, y, sepiaR, sepiaG, sepiaB, 255);
     }
   }
 
@@ -89,4 +71,5 @@
   }
 
   </script>
+  </body>
   </html>
