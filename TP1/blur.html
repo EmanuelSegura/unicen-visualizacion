@@ -1,0 +1,54 @@
+  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Template</title>
+  </head>
+  <canvas id="canvas" width="900" height="600" style="border:#000 solid 1px;" />
+  <body>
+  <script>
+  var ctx = document.getElementById("canvas").getContext("2d");
+
+  var width = 600;
+  var height = 600;
+
+  var image1 = new Image();
+  image1.src = "drdre.jpg";
+
+
+  image1.onload = function(){
+
+    imageData = ctx.getImageData(0,0, this.width, this.height);
+
+
+    for (var x=0; x<imageData.width; x++){
+      for(var y=0; y<imageData.height; y++){
+
+          function blur(image1, ctx, passes) {
+          var i, x, y;
+          passes = passes || 4;
+          ctx.globalAlpha = 0.125;
+          // Loop por cada pasada del blur
+          for (i = 1; i <= passes; i++) {
+            for (y = -1; y < 2; y++) {
+              for (x = -1; x < 2; x++) {
+                  ctx.drawImage(image1, x, y);
+              }
+            }
+          }
+        context.globalAlpha = 1.0; //reseteo globalalpha
+        }
+
+    }
+  }
+
+    blur(image1, ctx);
+
+
+  ctx.putImageData(imageData,0,0);//la redibujo modificado
+
+  }
+
+  </script>
+  </body>
+  </html>
