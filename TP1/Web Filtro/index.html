@@ -1,23 +1,44 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="css/bootstrap.css" media="screen" title="no title" charset="utf-8">
+<head>
+  <link rel="stylesheet" href="css/bootstrap.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
 
-    <meta charset="utf-8">
-    <title>Filtros</title>
-  </head>
-  <body>
-    <h2>Filtros</h2>
+  <meta charset="utf-8">
+  <title>Filtros</title>
+</head>
+<body>
 
-    <form id="form1" runat="server">
-        <input type='file' id="imgInp" />
-        <img id="pic" src="#" alt="" />
-    </form>
-    <button id="boton-subir-imagen" type="submit" name="button">Subir imagen</button>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">
+          <img id="icon-navbar" alt="filter-icon" src="images/1.png">
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container thumbnail">
+    <div class="row">
+      <div class="col-sm-8">
+        <h2 class="col-md-4">Sube tu imagen</h2>
+      </div>
+      <div class="col-md-8 col-md-offset-4">
+        <input class="btn btn-primary" type="file" id="imageLoader" name="imageLoader"/>
+        <button class="btn btn-primary" id="boton-subir" type="button" name="button">Subir</button>
+        <canvas id="imageCanvas"></canvas>
+
+      </div>
+      <img class="col-md-12" src="images/drdre.jpg" alt="dr.dre">
+    </div>
+  </div>
 
 
-  </body>
-  <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
-  <script type="text/javascript" src="js/bootstrap.js"></script>
-  <script type="text/javascript" src="js/subirImagen.js"></script>
+</body>
+<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+ <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script type="text/javascript" src="js/subirImagen.js"></script>
+
 </html>
