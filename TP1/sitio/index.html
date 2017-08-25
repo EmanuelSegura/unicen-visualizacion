@@ -3,7 +3,6 @@
 <head>
   <link rel="stylesheet" href="css/bootstrap.css" media="screen" title="no title" charset="utf-8">
   <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
-
   <meta charset="utf-8">
   <title>Filtros</title>
 </head>
@@ -25,12 +24,21 @@
         <h2 class="col-md-4">Sube tu imagen</h2>
       </div>
       <div class="col-md-8 col-md-offset-4">
-        <input class="btn btn-primary" type="file" id="imageLoader" name="imageLoader"/>
-        <button class="btn btn-primary" id="boton-subir" type="button" name="button">Subir</button>
-        <canvas id="imageCanvas"></canvas>
+          <canvas id="canvas" width="300" height="300" style="border:#000 solid 1px;"/>
 
       </div>
-      <img class="col-md-12" src="images/drdre.jpg" alt="dr.dre">
+      <button id="negativo" type="button" name="button">Negativo</button>
+      <button id="sepia" type="button" name="button">Sepia</button>
+      <button id="escalaDeGrises" type="button" name="button">Escala de grises</button>
+      <button id="brillo" type="button" name="button">Brillo</button>
+      <button id="binarizacion" type="button" name="button">Binarizacion</button>
+      <button id="saturacion" type="button" name="button">Saturacion</button>
+      <button id="tonosRojos" type="button" name="button">Tonos Rojos</button>
+      <button id="blur" type="button" name="button">Blur</button>
+      <input id="subir" type="file" multiple=""/>
+
+
+
     </div>
   </div>
 
@@ -38,7 +46,7 @@
 </body>
 <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
 <script type="text/javascript" src="js/bootstrap.js"></script>
- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-<script type="text/javascript" src="js/subirImagen.js"></script>
+<script type="text/javascript" src="js/behavior.js"></script>
+
 
 </html>
