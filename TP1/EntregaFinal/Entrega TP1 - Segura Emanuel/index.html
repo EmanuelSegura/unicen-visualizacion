@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="css/bootstrap.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
+  <meta charset="utf-8">
+  <title>Filter App</title>
+</head>
+<body>
+
+  <section>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">
+            <img id="icon-navbar" alt="filter-icon" src="images/1.png">
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container thumbnail">
+      <div class="row center">
+        <div class="col-sm-8">
+          <h2 class="col-md-4 texto-titulo">Aplica filtro</h2>
+        </div>
+        <div class="col-md-8 col-md-offset-4">
+          <canvas id="canvas" width="500" height="500"/>
+        </div>
+      </div>
+
+      <div class="col-md-12">
+        <div class="center-block">
+          <ul class="list-group">
+            <label class="btn btn-primary btn-file">Subir <input type="file" style="display: none;"></label>
+            <li <button id="negativo"class="btn btn-primary btn-md"type="button" name="button">Negativo</button></li></li>
+            <li <button id="sepia" class="btn btn-primary btn-md"type="button" name="button">Sepia</button></li>
+            <li <button id="escalaDeGrises"class="btn btn-primary btn-md" type="button" name="button">Escala de grises</button></li>
+            <li <button id="brillo"class="btn btn-primary btn-md" type="button" name="button">Brillo</button></li>
+            <li <button id="binarizacion"class="btn btn-primary btn-md" type="button" name="button">Binarizacion</button></li>
+            <li <button id="saturacion"class="btn btn-primary btn-md" type="button" name="button">Saturacion</button></li>
+            <li <button id="tonosRojos"class="btn btn-primary btn-md" type="button" name="button">Tonos Rojos</button></li>
+            <a id="guardarImagen" class="btn btn-primary btn-md" href="#">Guardar</a>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <footer class="">© Filter App - 2017 </footer>
+
+</body>
+<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/behavior.js"></script>
+
+
+</html>
