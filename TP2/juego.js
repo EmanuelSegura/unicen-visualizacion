@@ -1,5 +1,6 @@
 var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+
+Tablero(canvas);
 
 // function Circle(paramPosX, paramPosY,paramRadio,paramColor){
 //   this.posX = paramPosX;
@@ -8,6 +9,11 @@ var ctx = canvas.getContext("2d");
 //   this.color = paramColor;
 // }
 
-function Tablero (){
+function Tablero (canvas){
 
-}
+  var ctx=canvas.getContext("2d");
+  ctx.fillStyle="#FFE400";
+  ctx.fillRect(100,20,500,300);
+
+
+};
