@@ -1,0 +1,15 @@
+
+
+.monster {
+  width: 75px;
+  height: 95px;
+  margin: 2% auto;
+  background: url('Sprites/punk2.png') left center;
+  animation: play 0.9s steps(3) infinite;
+}
+
+@keyframes play {
+  0% { background-position-x: 0px; background-position-y: 0px; }
+	100% { background-position-x: -75px; background-position-y: 0px; }
+
+}
