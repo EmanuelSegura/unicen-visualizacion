@@ -1,0 +1,42 @@
+#background1 {
+    width: 600px;
+    height: 244px;
+    margin: 2% auto;
+    transform: scale(3);
+    background: url('back1.png')left center;
+    animation: back 100s steps(60000) infinite;
+  }
+
+  @keyframes back {
+    0% { background-position-x: 0px;}
+    100% { background-position-x: -2103px;}
+  }
+
+.punk-agite {
+  width: 75px;
+  height: 90px;
+  margin: 7% auto;
+  transform: scale(0.7);
+  background: url('punk2.png')left center;
+  animation: agite 0.9s steps(3) infinite;
+}
+
+@keyframes agite {
+  0% { background-position-x: 0px; background-position-y: 0px; }
+	100% { background-position-x: -225px; background-position-y: 0px; }
+
+}
+
+
+.punk-pinia {
+    width: 77px;
+    height: 90px;
+    transform: scale(0.7);
+    background: url('punk2.png')left center;
+    animation: pinia 0.9s steps(2) infinite;
+  }
+
+  @keyframes pinia {
+    0% { background-position-x: 0px; background-position-y: -635px; }
+  	100% { background-position-x: -150px; background-position-y: -635px; }
+  }

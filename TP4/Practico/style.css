@@ -1,0 +1,16 @@
+#clickeable{
+  height: 100px;
+  width: 100px;
+  background: red;
+/*    transform: rotate(); */
+  transition: width 1s;
+
+
+}
+
+#clickeable:hover {
+  width: 1000px;
+  transition: width 3s;
+  background: blue;
+
+}
