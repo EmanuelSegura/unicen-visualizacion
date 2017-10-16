@@ -15,13 +15,14 @@
 .punk-agite {
   width: 75px;
   height: 90px;
-  margin: 7% auto;
+  margin: 20% auto;
+  float:left;
   transform: scale(0.7);
   background: url('punk2.png')left center;
   animation: agite 0.9s steps(3) infinite;
 }
 
-@keyframes agite {
+ @keyframes agite {
   0% { background-position-x: 0px; background-position-y: 0px; }
 	100% { background-position-x: -225px; background-position-y: 0px; }
 
@@ -31,6 +32,8 @@
 .punk-pinia {
     width: 77px;
     height: 90px;
+    margin: 20% 20%;
+    float:left;
     transform: scale(0.7);
     background: url('punk2.png')left center;
     animation: pinia 0.9s steps(2) infinite;
@@ -40,3 +43,16 @@
     0% { background-position-x: 0px; background-position-y: -635px; }
   	100% { background-position-x: -150px; background-position-y: -635px; }
   }
+
+.bill {
+    width: 120px;
+    height:107px;
+    transform: scale(0.7);
+    background:url('bill-caminar.png');
+    animation: caminar 0.9s steps(4) infinite;
+}
+
+@keyframes caminar {
+  0% {background-position-x: 0px; background-position-y: 0px; }
+  100% { background-position-x: -320px; background-position-y: 0px;}
+}
