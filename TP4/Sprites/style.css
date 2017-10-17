@@ -45,14 +45,17 @@
   }
 
 .bill {
-    width: 120px;
+    width: 66px;
     height:107px;
     transform: scale(0.7);
+    position: relative;
+    float: left;
+    margin: 20% -55%;
     background:url('bill-caminar.png');
     animation: caminar 0.9s steps(4) infinite;
 }
 
 @keyframes caminar {
   0% {background-position-x: 0px; background-position-y: 0px; }
-  100% { background-position-x: -320px; background-position-y: 0px;}
+  100% { background-position-x: -264px; background-position-y: 0px;}
 }
