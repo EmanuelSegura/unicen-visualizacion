@@ -1,16 +1,22 @@
-#background1 {
+.container {
     width: 600px;
     height: 244px;
-    margin: 2% auto;
     transform: scale(3);
-    background: url('back1.png')left center;
-    animation: back 100s steps(60000) infinite;
+    background: url('back1.png');
+    margin: 2% 34%;
+    position:fixed;
+    /*animation: back 100s steps(60000) infinite;*/
   }
 
-  @keyframes back {
+  /*@keyframes back {
     0% { background-position-x: 0px;}
     100% { background-position-x: -2103px;}
-  }
+  }*/
+
+
+.background1{
+  position: relative;
+}
 
 .punk-agite {
   width: 75px;
@@ -52,7 +58,7 @@
     float: left;
     margin: 20% -55%;
     background:url('bill-caminar.png');
-    animation: caminar 0.9s steps(4) infinite;
+    /*animation: caminar 0.9s steps(4) infinite;*/
 }
 
 @keyframes caminar {
