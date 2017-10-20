@@ -6,6 +6,12 @@ $(document).keydown(function(e){
         });
         break;
 
+    case 38:
+        $(".bill").finish().animate({
+            top: "-=15"
+        });
+        break;
+
     case 39:    //Flecha derecha
         $(".background1").finish().animate({
           left: "+=2"
@@ -22,8 +28,14 @@ $(document).keydown(function(e){
         $(".bill").css("animation","caminar 0.9s steps(4) infinite");
         break;
 
+    case 38:
+        $(".bill").css("animation","caminar 0.9s steps(1) infinite");
+        break
+
     case 39:    //Flecha izquierda
         $(".bill").css("animation","caminar 0.9s steps(4) infinite");
         break;
+
+
 }
 });
