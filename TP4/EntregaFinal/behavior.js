@@ -29,11 +29,16 @@ $(document).keydown(function(e){
         break;
 
     case 38:
-        $(".bill").css("animation","caminar 0.9s steps(1) infinite");
-        break
+        $(".bill").css("animation","caminar 0.9s steps(1) 1");
+        break;
 
-    case 39:    //Flecha izquierda
+    case 39:    //Flecha derecha
         $(".bill").css("animation","caminar 0.9s steps(4) infinite");
+        break;
+
+    case 40:   
+        $(".bill-patada").css("animation","patada 0.9s steps(3) infinite");
+
         break;
 
 

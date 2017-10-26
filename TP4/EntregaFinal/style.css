@@ -1,0 +1,92 @@
+.container {
+    width: 600px;
+    height: 244px;
+    transform: scale(2);
+    background: url('back1.png');
+    background: url('back1clouds.png');
+    margin: 2% 34%;
+    position:relative;
+    animation: back 1s steps(1) infinite;
+  }
+
+  @keyframes back {
+    0% { background-position-x: 0px;}
+    100% { background-position-x: -2103px;}
+  }
+
+.background1clouds {
+    position:relative;
+}
+
+.background1{
+  position: relative;
+}
+
+.bill {
+    width: 88px;
+    height:107px;
+    transform: scale(0.7);
+    position: relative;
+    float: left;
+    margin: 20% auto;
+    background:url('caminar1.png') left center;
+
+    /*animation: caminar 0.9s steps(4) infinite;*/
+}
+
+.bill-patada{
+    width: 88px;
+    height:107px;
+    transform: scale(0.7);
+    position: relative;
+    float: left;
+    /*margin: 2% auto;*/
+    background:url('patada1.png') left center;
+    display: none;
+}
+
+@keyframes caminar {
+  0% {background-position-x: 0px; background-position-y: 0px; }
+  100% { background-position-x: -352px; background-position-y: 0px;}
+
+}
+
+@keyframes patada {
+  0% {background-position-x: 0px; background-position-y: 0px;}
+  100% {background-position-x: -264px; background-position-y: 0px;}
+}
+
+.punk-agite {
+  width: 75px;
+  height: 90px;
+  margin: 20% auto;
+  float:left;
+  transform: scale(0.7);
+  background: url('punk2.png')left center;
+  animation: agite 0.9s steps(3) infinite;
+}
+
+ @keyframes agite {
+  0% { background-position-x: 0px; background-position-y: 0px; }
+  100% { background-position-x: -225px; background-position-y: 0px; }
+
+}
+
+
+.punk-pinia {
+    width: 77px;
+    height: 90px;
+    margin: 20% 20%;
+    float:left;
+    transform: scale(0.7);
+    background: url('punk2.png')left center;
+    animation: pinia 0.9s steps(2) infinite;
+  }
+
+  @keyframes pinia {
+    0% { background-position-x: 0px; background-position-y: -635px; }
+    100% { background-position-x: -150px; background-position-y: -635px; }
+  }
+
+
+
