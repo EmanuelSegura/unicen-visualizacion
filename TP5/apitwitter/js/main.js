@@ -25,23 +25,3 @@ $(".boton-cargar-tweets").on("click", function(event){
     }
 );
 });
-
-
-
-
-function initializeGoogle(){
-	var latlng = new google.maps.LatLng(-37.328611, -59.136944);
-
-	var mapOptions = {
-		zoom: 8,
-		center: latlng,
-		mapTypeId: google.maps.MapTypeId.ROADMAP
-	}
-
-	var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
-};
-
-google.maps.event.addDomListener(window,'load',initializeGoogle);
-
-
-
