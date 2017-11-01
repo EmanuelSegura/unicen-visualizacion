@@ -1,46 +1,31 @@
 //Twitter
-let infoSesion = {
-  
-};
+
+let cb = new Codebird;
+
+$(document).ready(function(){
+
+    cb.setConsumerKey("Hq7798E1ZQIXKdK5hq1y6smEl","t8jXiK0998QPP2olkeVojMTFHQjXN0cxuomIzRY5EN8ynSfMYk");
+    cb.setToken("925470525463330816-i2d7UrqjNO6CCoRIz3BS5cP9WBT0qTb", "cUNLC5tCQs6NthK7IdZq5OwD198yLOftc84eULf49nPhy");
+    console.log( "Cargo correctamente" );
+    });
 
 
-$(document).ready(function() {
-    console.log( "ready!" );
+    let params = {
+    q: "messi",
+    count:30
+	};
 
+
+$(".boton-cargar-tweets").on("click", function(event){
+  cb.__call(
+    "search_tweets",
+    params,
+    function (reply) {
+        console.log(reply);
+    }
+);
 });
 
-$("boton-cargar-tweets").on("click", function(event)
-{
-  $.ajax({
-    url:"https://api.twitter.com/1.1/search/tweets.json?q=%23tandil",
-    method:"GET",
-    dataType:"JSON",
-    success: function(data){
-      $("#twitter").html(data);
-    },
-    error: function(){
-      $("#twitter").html("<h1>Error - Intente de nuevo mas tarde</h1>");
-    }
-  });
-  $("#twitter").html("<h1>Cargando Tweets...</h1>");
-  event.preventDefault();
-});
-
-function initializeTwitter(){
-	 $.ajax({
-    url:"https://api.twitter.com/oauth/Hq7798E1ZQIXKdK5hq1y6smEl",
-    method:"POST",
-    dataType:"JSON",
-    success: function(data){
-      $("#twitter").html(data);
-    },
-    error: function(){
-      $("#twitter").html("<h1>Error - No se pudo iniciar sesion</h1>");
-    }
-  });
-  $("#twitter").html("<h1>Iniciando sesion...</h1>");
-  event.preventDefault();
-}
 
 
 
