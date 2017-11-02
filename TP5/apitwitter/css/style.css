@@ -1,8 +1,4 @@
-#twitter{
-	width: 800px;
-	height: 600px;
-	border: 3px solid black;
-}
+
 
 @media screen and (min-width:768px){
     .navbar-brand-centered {
@@ -20,11 +16,15 @@
 }
 
 .container-img{
-	height: 800px;
+	height: 100%;
 }
 
-.titulo-search{
+.titulo-search , .footer-style{
 	text-align: center;
 	font-weight: bold;
-	
 }
+
+
+
+
+
