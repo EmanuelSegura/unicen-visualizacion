@@ -1,4 +1,6 @@
-
+body{
+    overflow-x:hidden;
+}
 
 @media screen and (min-width:768px){
     .navbar-brand-centered {
@@ -7,9 +9,9 @@
         display: block;
         width: 160px;
         text-align: center;
-        
+
     }
-    .navbar>.container .navbar-brand-centered, 
+    .navbar>.container .navbar-brand-centered,
     .navbar>.container-fluid .navbar-brand-centered {
         margin-left: -80px;
     }
@@ -24,7 +26,29 @@
 	font-weight: bold;
 }
 
+.row div a img{
+  width: 350px;
+   height: 200px;
+}
+
+.aa{
+  overflow: hidden;
+}
+
+.nav-parent, .nav-parent nav{
+position: relative;
+
+}
 
 
+.twitts-box{
+
+  overflow-y: scroll;
+  max-height: 100vh;
 
 
+}
+
+::-webkit-scrollbar {
+display: none;
+}
