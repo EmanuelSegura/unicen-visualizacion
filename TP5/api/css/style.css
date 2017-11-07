@@ -1,0 +1,78 @@
+body{
+    overflow-x:hidden;
+    background: url("../images/back1.jpg");
+    background-repeat: no-repeat;
+    opacity: 1;
+}
+
+.style-btn{
+
+background-color: #0084b4;
+border-color: #0084b4;
+
+}
+
+.glyphicon.glyphicon-picture, .glyphicon.glyphicon-th, .glyphicon.glyphicon-th-large {
+    font-size: 25px;
+    margin-right: -2px;
+    color: white;
+} 
+
+.thumbnail {
+  background: transparent;
+}
+
+
+
+@media screen and (min-width:768px){
+    .navbar-brand-centered {
+        position: absolute;
+        left: 50%;
+        display: block;
+        width: 160px;
+        text-align: center;
+
+    }
+    .navbar>.container .navbar-brand-centered,
+    .navbar>.container-fluid .navbar-brand-centered {
+        margin-left: -80px;
+    }
+}
+
+.container-img{
+	height: 100%;
+}
+
+.titulo-search , .footer-style{
+	text-align: center;
+	font-weight: bold;
+}
+
+.row div a img{
+  /*width: 300px;*/
+   height: 500px;
+}
+
+.aa{
+  overflow: hidden;
+}
+
+.nav-parent, .nav-parent nav{
+position: relative;
+
+}
+
+
+.twitts-box{
+
+  overflow-y: scroll;
+  max-height: 100vh;
+
+
+}
+
+::-webkit-scrollbar {
+display: none;
+}
+
+

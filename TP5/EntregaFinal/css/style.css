@@ -22,6 +22,8 @@ border-color: #0084b4;
   background: transparent;
 }
 
+
+
 @media screen and (min-width:768px){
     .navbar-brand-centered {
         position: absolute;
