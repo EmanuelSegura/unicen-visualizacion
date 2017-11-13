@@ -22,6 +22,12 @@ border-color: #0084b4;
   background: transparent;
 }
 
+#thumbhide{
+  visibility: hidden;
+  border: 1;
+}
+
+
 
 
 @media screen and (min-width:768px){
