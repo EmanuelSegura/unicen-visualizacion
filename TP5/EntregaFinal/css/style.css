@@ -12,11 +12,15 @@ border-color: #0084b4;
 
 }
 
-.glyphicon.glyphicon-picture, .glyphicon.glyphicon-th, .glyphicon.glyphicon-th-large {
+.glyphicon.glyphicon-picture, .glyphicon.glyphicon-th, .glyphicon.glyphicon-th-large{
     font-size: 25px;
     margin-right: -2px;
     color: white;
 } 
+
+.hideFilter{
+  visibility: hidden;
+}
 
 .thumbnail {
   background: transparent;
@@ -27,6 +31,9 @@ border-color: #0084b4;
   border: 1;
 }
 
+#footer{
+  margin-top: 10%;
+}
 
 
 
@@ -59,9 +66,7 @@ border-color: #0084b4;
    height: 500px;
 }
 
-.aa{
-  overflow: hidden;
-}
+
 
 .nav-parent, .nav-parent nav{
 position: relative;
@@ -79,6 +84,11 @@ position: relative;
 
 ::-webkit-scrollbar {
 display: none;
+}
+
+.img-instruccion{
+  background-size: 80%;
+  visibility: visible;
 }
 
 

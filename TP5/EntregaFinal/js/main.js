@@ -38,8 +38,11 @@ function filterSearch(reply){
         if(reply.statuses[i].entities.media != undefined){
             // $("#imagejson").attr("src",reply.statuses[i].entities.media[0].media_url_https);
         tweets.push({img: reply.statuses[i].entities.media[0].media_url_https});
+        $(".img-instruccion").css("visibility","hidden");
+        $("#footer").css("margin-top",0+'%');
+        $(".hideFilter").css("visibility","visible");
         $("#thumbhide").css("visibility","visible");
-        $(".twitts-box").append('<div class="co col-md-4 "><a href="#" class="thumbnail"><img id="imagejson" class= "img-responsive img-rounded" src=" ' +reply.statuses[i].entities.media[0].media_url_https+ ' " alt=""></a></div>');
+        $(".twitts-box").append('<div class="co col-md-4"><a href="#" class="thumbnail"><img id="imagejson" class= "img-responsive img-rounded" src=" ' +reply.statuses[i].entities.media[0].media_url_https+ ' " alt=""></a></div>');
    
     }
 }
