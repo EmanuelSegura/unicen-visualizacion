@@ -53,34 +53,51 @@
 
     };
 
-    $(".btn-anim-1").on("click", function(event){ 
+    let i = 0;   
+
+
+   $(".btn-anim-1").on("click", function(e){
         anim1();
+      });
+
+      function anim1(){
+          console.log(tweets);
+          $(".twitts-box").empty();
+          $(".twitts-box").append('<li><a class="glyphicon glyphicon-chevron-left carrousel-izq" href="#"></a></li> <div class="co col-md-8 col-md-offset-2"><a href="#" class=""><img id="imagejson" class= "img-responsive img-rounded" src=" '+tweets[i].img+' " alt=""></a></div><li><a class="glyphicon glyphicon-chevron-right carrousel-der" href="#"></a></li>');
+        }
+
+
+    $(document).on("click",".twitts-box",function(e){
+      $(".carrousel-izq").on("click",function(){
+        correIzq();
+      });
+      $(".carrousel-der").on("click",function(){
+        correDer()
+      });
+
+
     });
 
-
-    function anim1(){
-        console.log(tweets);
-        let i=0;
+    function correDer(){
+    console.log("der");
+    if(i<tweets.length){
+        i++;
         $(".twitts-box").empty();
-        $(".twitts-box").append('<li><a class="glyphicon glyphicon-chevron-left carrousel-izq" href="#"></a></li> <div class="co col-md-8 col-md-offset-2"><a href="#" class=""><img id="imagejson" class= "img-responsive img-rounded" src=" '+tweets[i].img+' " alt=""></a></div><li><a class="glyphicon glyphicon-chevron-right carrousel-der" href="#"></a></li>'); 
-
-        
-        $(".carrousel-izq").on("click", function(event){ 
-            if(i>0){
-                i--;
-                $(".twitts-box").empty();
-                $(".twitts-box").append('<li><a class="glyphicon glyphicon-chevron-left carrousel-izq" href="#"></a></li> <div class="co col-md-8 col-md-offset-2"><a href="#" class=""><img id="imagejson" class= "img-responsive img-rounded" src=" '+tweets[i].img+' " alt=""></a></div><li><a class="glyphicon glyphicon-chevron-right carrousel-der" href="#"></a></li>'); 
-            }
-        });
-
-        $(".carrousel-der").on("click", function(event){ 
-            if(i<tweets.length){
-                i++;
-                $(".twitts-box").empty();
-                $(".twitts-box").append('<li><a class="glyphicon glyphicon-chevron-left carrousel-izq" href="#"></a></li> <div class="co col-md-8 col-md-offset-2"><a href="#" class=""><img id="imagejson" class= "img-responsive img-rounded" src=" '+tweets[i].img+' " alt=""></a></div><li><a class="glyphicon glyphicon-chevron-right carrousel-der" href="#"></a></li>'); 
-            }
-        });
-
-    }
+        $(".twitts-box").append('<li><a class="glyphicon glyphicon-chevron-left carrousel-izq" href="#"></a></li> <div class="co col-md-8 col-md-offset-2"><a href="#" class=""><img id="imagejson" class= "img-responsive img-rounded" src=" '+tweets[i].img+' " alt=""></a></div><li><a class="glyphicon glyphicon-chevron-right carrousel-der" href="#"></a></li>');
+    }else{
+        i=0;
+        $(".twitts-box").empty();
+        $(".twitts-box").append('<li><a class="glyphicon glyphicon-chevron-left carrousel-izq" href="#"></a></li> <div class="co col-md-8 col-md-offset-2"><a href="#" class=""><img id="imagejson" class= "img-responsive img-rounded" src=" '+tweets[i].img+' " alt=""></a></div><li><a class="glyphicon glyphicon-chevron-right carrousel-der" href="#"></a></li>');
+    
+        }
+};
 
 
+  function correIzq(){
+    console.log("izq");
+      if(i>0){
+          i--;
+          $(".twitts-box").empty();
+          $(".twitts-box").append('<li><a class="glyphicon glyphicon-chevron-left carrousel-izq" href="#"></a></li> <div class="co col-md-8 col-md-offset-2"><a href="#" class=""><img id="imagejson" class= "img-responsive img-rounded" src=" '+tweets[i].img+' " alt=""></a></div><li><a class="glyphicon glyphicon-chevron-right carrousel-der" href="#"></a></li>');
+      }
+  }
