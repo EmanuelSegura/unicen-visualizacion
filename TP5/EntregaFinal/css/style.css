@@ -128,8 +128,26 @@ display: none;
 
 /*Animaciones*/
 
-#imagejson{
+/*#imagejson{
     animation-name:scale;
+    animation-duration: 1s;
+    animation-delay: linear;
+}*/
+
+.imagesca{
+    animation-name:scale;
+    animation-duration: 1s;
+    animation-delay: linear;
+}
+
+.imagerot{
+    animation-name:rotation;
+    animation-duration: 1s;
+    animation-delay: linear;
+}
+
+.imagetran{
+    animation-name:transform;
     animation-duration: 1s;
     animation-delay: linear;
 }

@@ -8,7 +8,7 @@
 
     let params = {
         q: "",
-        count:40
+        count:40,
     };
 
     $(document).ready(function(){
@@ -33,12 +33,13 @@
                 tweets=[];
                 for (let i=0; i< reply.statuses.length;i++){
                     if(reply.statuses[i].entities.media != undefined){
-                        tweets.push({img: reply.statuses[i].entities.media[0].media_url_https});
+                        tweets.push({img: reply.statuses[i].entities.media[0].media_url_https, like:reply.statuses[i].favorite_count});
                     }
                 }
 
-                filterSearch(tweets,anim);
+                filterSearch(tweets);
                 console.log(reply);
+                console.log(tweets);
             }
             );
 
@@ -48,8 +49,9 @@
         params['q']= inputSearch;
     };
 
-    function filterSearch(reply,anim){
-        $("#imagejson").css("animation-name",anim);
+    function filterSearch(reply){
+        
+
        
         $(".twitts-box").empty();
         $(".hideImage").remove();
@@ -59,10 +61,12 @@
         $("#thumbhide").css("visibility","visible");
 
         for (let i=0; i< reply.length;i++){
-            $("#imagejson").css("animation-name",anim);
-            console.log($("#imagejson").css("animation-name"));
-            $(".twitts-box").append('<div class="co col-md-4"><a href="#" class="thumbnail"><img id="imagejson" class= "img-responsive img-rounded" src=" '+tweets[i].img+' " alt=""></a></div>');  
+            
+            
+            $(".twitts-box").append('<div class="co col-md-4"><a href="#" class="thumbnail"><img id="imagejson" class= "img-responsive img-rounded" src=" '+tweets[i].img+' " alt=""></a></div> <div>'+tweets[i].like+'</div>');  
+            $("#imagejson").addClass("imagerot");
         }
+
     };
 
     let i = 0;   
@@ -132,21 +136,28 @@ function setIntervaloCarrousel() {
 // Animaciones
 
 $(".btn-scale-anim1").on("click", function(event){ 
-     $("#imagejson").css("animation-name","scale");
-     anim="scale";
-    // filterSearch(tweets,anim);
+     $("#imagejson").removeClass("imagesca imagerot imagetran");
+     $("#imagejson").addClass("imagesca");
+
+     // anim="scale";
+     filterSearch(tweets);
 });
 
 $(".btn-translate-anim2").on("click", function(event){ 
-     $("#imagejson").css("animation-name","translate");
-     anim="translate";
-    // filterSearch(tweets,anim);
+
+
+     $("#imagejson").removeClass("imagesca imagerot imagetran");
+     $("#imagejson").addClass("imagetran");
+    
+    filterSearch(tweets);
 });
 
 $(".btn-rotation-anim3").on("click", function(event){ 
-     $("#imagejson").css("animation-name","rotation");
-     anim = "rotation";
-    // filterSearch(tweets,anim);
+     
+     $("#imagejson").removeClass("imagesca imagerot imagetran");
+     $("#imagejson").addClass("imagerot");
+    
+    filterSearch(tweets);
 
 });
 
