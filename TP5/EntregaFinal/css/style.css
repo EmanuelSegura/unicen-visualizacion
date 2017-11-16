@@ -95,12 +95,60 @@ display: none;
   visibility: visible;
 }
 
-.carrousel-izq{
+/*.carrousel-izq{
 
 }
 
 .carrousel-der{
 
+}*/
+
+.row .twitts-box .btn-izq{
+  display: flex;
+  flex-direction:row;
+
 }
+
+.row .twitts-box .btn-der{
+  display: flex;
+  flex-direction:row-reverse;
+
+}
+
+
+.row .twitts-box li{
+  width: 0px;
+  height: 0px;
+}
+
+.row .twitts-box li{
+  width: 0px;
+  height: 0px;
+}
+
+/*Animaciones*/
+
+#imagejson{
+    animation-name:scale;
+    animation-duration: 1s;
+    animation-delay: linear;
+}
+
+@keyframes rotation{
+  from {transform:rotate(0deg);}
+  to{transform:rotate(360deg);}
+}
+
+@keyframes scale{
+  from {transform:scale(2);}
+  to{transform:scale(1);}
+}
+
+@keyframes translate{
+  from {transform:translateX(-500px);}
+  to{transform:translateX(0px);}
+}
+
+
 
 
