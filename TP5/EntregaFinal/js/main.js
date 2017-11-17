@@ -63,18 +63,29 @@
 
     };
 
+    let galeria=true;
+
+    function recarga(){
+      if(galeria){
+        filterSearch(tweets,anim);
+      }else{
+        carrousel();
+      }
+    }
     $(".btn-scale-anim1").on("click", function(event){
       clearInterval(tiempo);
          anim="imagesca";
           removeClass();
-          filterSearch(tweets,anim);
+          recarga();
+          // filterSearch(tweets,anim);
         });
 
     $(".btn-translate-anim2").on("click", function(event){
       clearInterval(tiempo);
           anim="imagerot";
            removeClass();
-           filterSearch(tweets,anim);
+           recarga();
+          //  filterSearch(tweets,anim);
     });
 
     $(".btn-rotation-anim3").on("click", function(event){
@@ -82,7 +93,8 @@
       clearInterval(tiempo);
         anim="imagetran";
         removeClass();
-        filterSearch(tweets,anim);
+        recarga();
+        // filterSearch(tweets,anim);
       });
 
     function removeClass(){
@@ -93,12 +105,14 @@
     let i = 0;
 
      $(".galery").on("click", function(e){
+       galeria=true;
         filterSearch(tweets,anim);
        clearInterval(tiempo);
     });
 
 
     $(".carrousel1").on("click", function(e){
+      galeria=false;
       clearInterval(tiempo);
         carrousel();
     });

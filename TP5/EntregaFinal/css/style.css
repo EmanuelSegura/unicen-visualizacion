@@ -12,7 +12,7 @@ border-color: #0084b4;
 
 }
 
-.glyphicon.glyphicon-picture, .glyphicon.glyphicon-th, .glyphicon.glyphicon-unchecked, .glyphicon.glyphicon-th-large,.glyphicon-chevron-left,.glyphicon-chevron-right{
+.glyphicon.glyphicon-picture, .glyphicon.glyphicon-th, .glyphicon.glyphicon-refresh, .glyphicon.glyphicon-resize-small , .glyphicon.glyphicon-log-in ,.glyphicon.glyphicon-unchecked, .glyphicon.glyphicon-th-large,.glyphicon-chevron-left,.glyphicon-chevron-right{
     font-size: 25px;
     margin-right: -2px;
     color: white;
