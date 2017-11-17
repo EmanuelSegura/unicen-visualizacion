@@ -12,11 +12,11 @@ border-color: #0084b4;
 
 }
 
-.glyphicon.glyphicon-picture, .glyphicon.glyphicon-th, .glyphicon.glyphicon-th-large,.glyphicon-chevron-left,.glyphicon-chevron-right{
+.glyphicon.glyphicon-picture, .glyphicon.glyphicon-th, .glyphicon.glyphicon-unchecked, .glyphicon.glyphicon-th-large,.glyphicon-chevron-left,.glyphicon-chevron-right{
     font-size: 25px;
     margin-right: -2px;
     color: white;
-} 
+}
 
 .hideFilter{
   visibility: hidden;
@@ -147,7 +147,7 @@ display: none;
 }
 
 .imagetran{
-    animation-name:transform;
+    animation-name:translate;
     animation-duration: 1s;
     animation-delay: linear;
 }
@@ -166,7 +166,3 @@ display: none;
   from {transform:translateX(-500px);}
   to{transform:translateX(0px);}
 }
-
-
-
-
